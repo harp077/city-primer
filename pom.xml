@@ -7,12 +7,21 @@
     <packaging>war</packaging>
     
     <properties>
-        <spring-ver>4.3.18.RELEASE</spring-ver>
+        <spring-ver>4.3.25.RELEASE</spring-ver>
+        <derby-ver>10.14.2.0</derby-ver>
+        <servlet-api-ver>3.1.0</servlet-api-ver>
+        <el-api-ver>3.0.0</el-api-ver>
+        <pool-ver>3.4.3</pool-ver>
+        <jsf-ver>2.2.13</jsf-ver>
+        <jpa-ecl>2.6.1</jpa-ecl>
+        <pf-ver>6.1</pf-ver>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+    
+    <name>city-primer</name>
     
     <dependencies>
 
@@ -27,13 +36,13 @@
             <artifactId>spring-orm</artifactId>
             <version>${spring-ver}</version>
         </dependency>
-        
+        <!-- load from spring-orm !!
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>${spring-ver}</version>
         </dependency>
-        
+        -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
@@ -43,44 +52,38 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
+            <version>${servlet-api-ver}</version>
             <scope>provided</scope>
         </dependency> 
 
         <dependency>
             <groupId>org.apache.derby</groupId>
             <artifactId>derby</artifactId>
-            <version>10.11.1.1</version>
+            <version>${derby-ver}</version>
         </dependency>  
       
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
-            <version>3.2.0</version>
+            <version>${pool-ver}</version>
         </dependency> 
 
         <dependency>
             <groupId>org.apache.myfaces.core</groupId>
-            <artifactId>myfaces-api</artifactId>
-            <version>2.2.12</version>
-        </dependency> 
-        
-        <dependency>
-            <groupId>org.apache.myfaces.core</groupId>
             <artifactId>myfaces-impl</artifactId>
-            <version>2.2.12</version>
+            <version>${jsf-ver}</version>
         </dependency>
         
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>eclipselink</artifactId>
-            <version>2.5.2</version>
+            <version>${jpa-ecl}</version>
         </dependency>  
         
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>6.1</version>
+            <version>${pf-ver}</version>
         </dependency>   
         
         <dependency>
@@ -88,17 +91,18 @@
             <artifactId>all-themes</artifactId>
             <version>1.0.10</version>
         </dependency>          
-        
+        <!-- load from JPA !!!
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>1.1.0.Final</version>
         </dependency> 
-
+        -->
         <dependency>
             <groupId>javax.el</groupId>
             <artifactId>javax.el-api</artifactId>
-            <version>3.0.0</version>
+            <version>${el-api-ver}</version>
+            <scope>provided</scope>
         </dependency>                        
         
     </dependencies>   
@@ -131,7 +135,5 @@
         </plugins>
         
     </build>
-    
-    <name>city-primer</name>
     
 </project>
