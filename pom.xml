@@ -11,9 +11,11 @@
         <derby-ver>10.14.2.0</derby-ver>
         <servlet-api-ver>3.1.0</servlet-api-ver>
         <el-api-ver>3.0.0</el-api-ver>
+        <dbcp2-ver>2.8.0</dbcp2-ver>
         <pool-ver>3.4.3</pool-ver>
         <jsf-ver>2.2.20</jsf-ver>
-        <jpa-ecl>2.6.1</jpa-ecl>
+        <jpa-ecl>2.6.8</jpa-ecl>
+        <h2-ver>1.4.200</h2-ver>
         <pf-ver>6.1</pf-ver>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -55,19 +57,31 @@
             <version>${servlet-api-ver}</version>
             <scope>provided</scope>
         </dependency> 
-
+        <!--
         <dependency>
             <groupId>org.apache.derby</groupId>
             <artifactId>derby</artifactId>
             <version>${derby-ver}</version>
-        </dependency>  
-      
+        </dependency> 
+        -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2-ver}</version>
+        </dependency>          
+        
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>${dbcp2-ver}</version>
+        </dependency>        
+        <!--
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <version>${pool-ver}</version>
         </dependency> 
-        <!--
+        
         <dependency>
             <groupId>org.apache.myfaces.core</groupId>
             <artifactId>myfaces-impl</artifactId>

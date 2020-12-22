@@ -18,7 +18,7 @@ import city.jpa.City;
 //@Stateless
 //@RequestScoped
 //@RequestScope
-@Scope("prototype")
+//@Scope("prototype")
 @Service
 @Repository
 @Transactional
