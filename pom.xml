@@ -12,7 +12,7 @@
         <servlet-api-ver>3.1.0</servlet-api-ver>
         <el-api-ver>3.0.0</el-api-ver>
         <pool-ver>3.4.3</pool-ver>
-        <jsf-ver>2.2.13</jsf-ver>
+        <jsf-ver>2.2.20</jsf-ver>
         <jpa-ecl>2.6.1</jpa-ecl>
         <pf-ver>6.1</pf-ver>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -67,13 +67,19 @@
             <artifactId>HikariCP</artifactId>
             <version>${pool-ver}</version>
         </dependency> 
-
+        <!--
         <dependency>
             <groupId>org.apache.myfaces.core</groupId>
             <artifactId>myfaces-impl</artifactId>
             <version>${jsf-ver}</version>
         </dependency>
-        
+        -->
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.faces</artifactId>
+            <version>${jsf-ver}</version>
+        </dependency>
+                
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>eclipselink</artifactId>
@@ -103,7 +109,25 @@
             <artifactId>javax.el-api</artifactId>
             <version>${el-api-ver}</version>
             <scope>provided</scope>
-        </dependency>                        
+        </dependency>  
+        
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>                
+        
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.25</version>
+        </dependency>  
+        
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>                                                                                                   
         
     </dependencies>   
     
