@@ -15,7 +15,7 @@
         <pool-ver>3.4.3</pool-ver>
         <jsf-ver>2.2.20</jsf-ver>
         <jpa-ecl>2.6.8</jpa-ecl>
-        <h2-ver>1.4.200</h2-ver>
+        <h2-ver>2.0.206</h2-ver>
         <pf-ver>6.1</pf-ver>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
