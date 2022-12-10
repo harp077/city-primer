@@ -7,7 +7,7 @@
     <packaging>war</packaging>
     
     <properties>
-        <spring-ver>4.3.25.RELEASE</spring-ver>
+        <spring-ver>6.0.0</spring-ver>
         <derby-ver>10.14.2.0</derby-ver>
         <servlet-api-ver>3.1.0</servlet-api-ver>
         <el-api-ver>3.0.0</el-api-ver>
